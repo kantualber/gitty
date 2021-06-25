@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('Docker') {
-                	sh 'docker build -t dubinin/docker_build:latest . '
+                	sh 'docker build -t kantualber/docker_build:latest . '
                 }
             }
         }
@@ -34,7 +34,7 @@ pipeline {
             steps {
                 echo " ============== start pushing image =================="
                 sh '''
-                docker push dubinin/docker_build:latest
+                docker push kantualber/docker_build:latest
                 '''
             }
         }
